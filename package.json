@@ -1,0 +1,15 @@
+{
+  "name": "process-fitbit-data",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "tool to process fitbit files and upload it to influxdb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Donald Elrod",
+  "license": "ISC",
+  "dependencies": {
+    "influx": "^5.8.0"
+  }
+}
