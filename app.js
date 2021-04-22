@@ -1,5 +1,16 @@
 import FileParser from './FileParser.js'
+import InfluxInterface from './InfluxInterface.js'
+import fs from 'fs'
+
+const config = JSON.parse(fs.readFileSync('./config.json'));
+const secrets= JSON.parse(fs.readFileSync('./secrets.json'));
 
 let FP = new FileParser();
+let II = new InfluxInterface(config.host, secrets.influxdb_token);
 
-FP.processHeartrate();
+II.connect();
+
+
+await FP.processHeartrate(II);
+
+II.close();
