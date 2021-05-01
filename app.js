@@ -13,5 +13,6 @@ II.connect();
 
 // await FP.processHeartrate(II);
 // await FP.processWaterLogs(II);
+await FP.processSteps(II);
 
 II.close();

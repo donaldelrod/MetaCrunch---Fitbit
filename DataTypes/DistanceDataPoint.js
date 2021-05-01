@@ -1,13 +1,12 @@
 import { Point } from '@influxdata/influxdb-client'
 import IntradayDataPoint from './IntradayDataPoint.js'
 
-export default class WaterLogDataPoint extends IntradayDataPoint {
+export default class DistanceDataPoint extends IntradayDataPoint {
 
-    amount = null;
-    unit = null;
+    distance = null;
 
     constructor(date, data) {
-        super(date, 'Water Log');
+        super(date, 'Distance');
 
         this.amount = data.amount;
         this.unit = data.unit;

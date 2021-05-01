@@ -6,7 +6,7 @@ export default class HeartrateDataPoint extends IntradayDataPoint {
     confidence = null;
 
     constructor(date, data) {
-        super(date, data, 'Heart rate');
+        super(date, 'Heart rate');
 
         this.bpm = data.bpm;
         this.confidence = data.confidence;
